@@ -41,12 +41,13 @@ public class main {
         reviewService.add_review(user2.getName(), movie4.getName(), 5);
         reviewService.add_review(user1.getName(), movie2.getName(), 5);
         reviewService.add_review(user1.getName(), movie6.getName(), 7);
+        reviewService.add_review(user1.getName(), movie5.getName(), 7);
       
 
 				
 	System.out.println("\n Top N Movies in genre req:");
 	System.out.println(
-	reviewService.getTopNMoviesByCriticsInGenre(3, "viewer", "drama").toString());
+	reviewService.getTopNMoviesByCriticsInGenre(3, "critic", "drama").toString());
 				
 	System.out.println("\n average score in year ");
 	System.out.println(reviewService.getAverageReviewScoreInYear("2006"));

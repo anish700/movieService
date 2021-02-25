@@ -78,7 +78,6 @@ public class ReviewService {
           String userLevel, String genre) {
             //   userLevel="critic";
             //userModel user = userService.getUserFromName(userName);
-
             List<movieModel> moviesByGenre = this.movieService.getMoviesByGenre(genre);
             List<reviewModel> movies = this.getReviewByMovieNames(moviesByGenre);
             List<reviewModel> topReviews = movies.stream()

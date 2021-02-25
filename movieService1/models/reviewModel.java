@@ -21,11 +21,11 @@ public class reviewModel {
 
 
 	public String getUserLevel() {
+        System.out.println("  in reviewmodel : userlevel is  " +this.userLevel);
         return this.userLevel	;}
 
 
 	public Integer getRating() {
-		
         return this.rating;
        // return Integer.toString(rating1)
         
