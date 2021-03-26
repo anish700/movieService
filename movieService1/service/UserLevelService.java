@@ -16,21 +16,22 @@ import java.util.List;
 public class UserLevelService {
     private UserService userService;
     private static final Map<String, Integer> UserLevelMap;
-    
+
     public UserLevelService(UserService userService) {
         this.userService = userService;
-       
+
     }
+
     static {
-    UserLevelMap = new HashMap<>();
-    UserLevelMap.put("viewer", 1);
-    UserLevelMap.put("critic", 2);
-    UserLevelMap.put("expert", 3);
-    UserLevelMap.put("admin", 4);
+        UserLevelMap = new HashMap<>();
+        UserLevelMap.put("viewer", 1);
+        UserLevelMap.put("critic", 2);
+        UserLevelMap.put("expert", 3);
+        UserLevelMap.put("admin", 4);
     }
 
     private static final Map<String, String> levelUpgradation;
-    static  {
+    static {
         levelUpgradation = new HashMap<>();
         levelUpgradation.put("viewer", "critic");
         levelUpgradation.put("critic", "expert");
@@ -45,6 +46,7 @@ public class UserLevelService {
         levelLimit.put("expert", 6);
         levelLimit.put("admin", 12);
     }
+
     public void userLevelUpdate(String userName) throws Exception {
         this.userService.incrementReviews(userName);
         userModel user = this.userService.getUser(userName);
